@@ -1,0 +1,14 @@
+<form name="doctorForm">
+<div id="addDoctorContainer">
+    <h2>Add a Doctor</h2>
+                      <div class="loaded_module">
+                          <div class="container-fluid">
+                        <label for="name_doctor_name">Doctor name</label>
+                       <input type="text" class="form-control" id="doctorName" ng-model="doctors.doctor_name" required class="form-control"/>
+            </div> 
+               </div> 
+    <br>
+    <br>
+                        <button type="button" class="btn btn-primary btn-lg" ng-click="newDoctor()" ng-disabled="doctorForm.$invalid">Add doctor</button>
+    </div>
+</form>

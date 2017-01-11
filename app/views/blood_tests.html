@@ -1,0 +1,30 @@
+
+<div id="bloodTestContainer">
+    <h2>Blood Tests</h2>
+    <table id="blood_tests" class="table table-bordered table-striped">
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Value</th>
+            <th>Result</th>
+            <th></th>
+           <!-- <th>doctor</th>-->
+        </tr>
+        <tr ng-repeat="test in blood_tests | orderBy : 'test_name'" >
+            <td>{{ $index + 1 }}</td>
+            <td>{{test.test_name}}</td>
+            <td contenteditable ng-model="blood_test">{{test.test_value}}</td>
+            <td ng-class='{red : !test.test_result, white: test.test_result}'>{{test.test_result ? 'OK' : 'NOT OK'}}</td>
+            <td>
+                                        <button class="btn" type="button" style="" ng-click="update(this)">
+                                            Update
+                                        </button>
+                                        <!-- <button class="btn" type="button" style="" ng-click="deleteTest()">
+                                            Delete
+                                        </button>-->
+                                    </td>
+             <!--<td>{{test.test_result}}</td>-->
+           <!-- <td>{{test.id_doctor}}</td>-->
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,83 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "v1",
+		"title": "MedAssist-prj API",
+    	"description": "RESTful webservice for medical agenda"
+	},
+	"host": "localhost",
+	"schemes": ["http", "https"],
+  	"basePath": "/",
+	"paths": {
+		"/tests": {
+			"get": {
+				"tags": ["Test"],
+				"operationId": "tests_get",
+				"consumes": [],
+				"produces": ["application/json",
+				"text/json"],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Test"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"post": {
+				"tags": ["Test"],
+				"operationId": "tests_post",
+				"consumes": [],
+				"produces": ["application/json",
+				"text/json"],
+				"parameters": [{
+					"name": "body",
+					"in": "body",
+					"required": true,
+					"schema": {
+					    "$ref": "#/definitions/Test"
+					}
+				}],
+				"responses": {
+					"201": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Test"
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+	},
+	"definitions": {
+		"Test": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"test_name": {
+					"type": "string"
+				},
+				"test_value": {
+					"type": "string"
+				},
+				"test_result": {
+					"type": "string"
+				},
+				"id_doctor": {
+					"type": "integer"
+				}
+			}
+		}
+		
+	}
+}

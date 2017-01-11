@@ -1,0 +1,16 @@
+<div>
+    <h2>Edit Blood Tests</h2>
+                      <div class="loaded_module">
+                          <div class="container-fluid">
+                        
+                        <label for="doctor_test">Blood test </label>
+                      <select size="6" class="form-control" id="blood_test" ng-model="blood_test.id" required>
+	            	<option ng-repeat="blood_test in blood_tests" value="{{blood_test.id}}">{{blood_test.test_name}}</option>
+                    	</select>
+                    	
+               </div> 
+    
+                        <button type="button" id="deleteTestBtn" class="btn btn-primary" ng-click="deleteTest()">Delete Test</button>
+       
+    
+    </div>

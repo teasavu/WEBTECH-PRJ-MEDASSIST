@@ -1,0 +1,31 @@
+<div id="showDoctorsTestContainer">
+    <label for="show">See which doctors recommended you the blood tests</label>
+    <h2>Blood Tests by Doctors</h2>
+   
+    <!--<ul ng-repeat="doctor in doctors" >
+        <li  >{{doctor.doctor_name}}</li>
+        <ul ng-repeat="blood_test in doctor.Blood_tests">
+            <li >{{blood_test.test_name}}  </li>
+                </ul>
+    </ul> -->
+   <!-- <p ng-repeat="doctor in doctors">
+    {{doctor.doctor_name}} :
+
+    <span ng-repeat="blood_test in doctor.Blood_tests">
+        {{blood_test.test_name}} ,
+    <span/>
+</p>-->
+
+<ul>
+        <li ng-repeat= "doctor in doctors">
+          <div><b> {{doctor.doctor_name}} </b></div>
+          <ul>
+            <li ng-repeat="blood_test in doctor.Blood_tests">
+              <div>{{blood_test.test_name}}, {{blood_test.test_value}} </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+</div>
+
+</div>

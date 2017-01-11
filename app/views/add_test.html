@@ -1,0 +1,33 @@
+    <form name="bloodTestForm">
+     <div id="bloodTestContainer">
+    <h2>Add Blood Tests</h2>
+                      <div class="loaded_module">
+                          <div class="container-fluid">
+                        <label for="blood_test_name">Blood test name</label>
+                        <input type="text" name="blood_test_name" id="blood_test_name"  ng-model="blood_tests.test_name" class="form-control" required/>
+
+    
+                        <label for="test_value">Test Value</label>
+                        <input type="number" name="test_value" id="test_value" placeholder="Decimal" ng-model="blood_tests.test_value" class="form-control" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" required></textarea>
+                          
+    
+                        <label for="test_result">Test Result</label>
+                        <select class="form-control" id="test_result" ng-model="blood_tests.test_result" class="form-control" required>
+				            <option value="1">OK</option>
+			            	<option value="0">NOT OK</option>
+			            </select>
+    
+                        <label for="doctor_test">Doctor</label>
+                        <!--<input type="text" name="doctor_test" id="doctor_test" ng-model="blood_tests.DoctorId" class="form-control" required/>-->
+                        
+                        <select class="form-control" id="doctor_test" ng-model="blood_tests.DoctorId" required>
+			        	<option ng-repeat="doctor in doctors" value="{{doctor.id}}">{{doctor.doctor_name}}</option>
+		            	</select>
+               </div> 
+    
+                        <button type="button" class="btn btn-primary btn-lg" id="addTestBtn" ng-click="newBloodTest()" ng-disabled="bloodTestForm.$invalid">Add</button>
+       
+    
+    </div>
+</form>
+   

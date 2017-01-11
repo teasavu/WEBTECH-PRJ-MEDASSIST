@@ -1,0 +1,59 @@
+.back1{
+      background-color: #ccebff;
+      color:#001f33;
+  }
+#homeBtn{
+      color: #008B8B;
+      font-family: sans-serif;
+      font-weight: bold;
+}
+
+#bloodBtn{
+      color: #A52A2A;
+      font-family: sans-serif;
+      font-weight: bold;
+}
+#addBloodBtn{
+      color: #6B8E23;
+      font-family: sans-serif;
+      font-weight: bold;
+}
+#editBloodBtn{
+      color: #FF4500;
+      font-family: sans-serif;
+      font-weight: bold;
+}
+#doctorsBtn{
+      color: #800080;
+      font-family: sans-serif;
+      font-weight: bold;
+}
+#addDoctorsBtn{
+      color: #ff66ff;
+      font-family: sans-serif;
+      font-weight: bold;
+}
+#appointmentsBtn{
+      color: #009999;
+      font-family: sans-serif;
+      font-weight: bold;
+}
+#addDocBtn{
+      margin-top: 10px;
+}
+
+#addTestBtn{
+      margin-top: 20px;
+}
+
+#deleteTestBtn{
+      margin-top: 20px;
+}
+
+.red {
+    color: red; 
+}
+
+.black {
+    color: black;
+}
